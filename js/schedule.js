@@ -12,7 +12,7 @@ var SCHEDULE = [
         title: 'Intro Web Dev',
         start: 20,
         end: 22,
-        people: ['David Wong']
+        people: ['Budmonde D']
       }
     ]
   },
