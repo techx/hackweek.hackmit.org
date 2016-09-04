@@ -1,0 +1,57 @@
+*, html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 600px;
+  margin: 0 auto;
+}
+
+header {
+  background: #FEDEDE;
+}
+
+.times {
+  font-size: 10px;
+  color: #c0c0c0;
+  clear: both;
+  display: block;
+}
+
+.infos {
+  font-size: 14px;
+  clear: both;
+  display: block;
+}
+
+.block {
+  float: left;
+}
+
+.event {
+  float: left;
+  border: 1px solid #e4e4e4;
+  border-radius: 1px;
+}
+
+.empty {
+  border-right: 1px solid #e4e4e4;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+  text-align: right;
+}
+
+.half-hour {
+  width: 100px;
+}
+
+.one-hour {
+  width: 200px;
+}
