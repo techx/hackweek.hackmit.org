@@ -10,7 +10,7 @@ div {
 }
 
 .page {
-  width: 600px;
+  width: 680px;
   margin: 0 auto;
 }
 
@@ -26,7 +26,7 @@ header {
 
 .times {
   font-size: 10px;
-  color: #c0c0c0;
+  color: red; /*#c0c0c0;*/
   clear: both;
   display: block;
 }
@@ -46,7 +46,7 @@ header {
   float: left;
   border: 1px solid #e4e4e4;
   border-radius: 1px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .empty {
@@ -63,11 +63,23 @@ header {
 }
 
 .half-hour {
-  width: 100px;
+  width: 60px;
 }
 
 .one-hour {
-  width: 200px;
+  width: 120px;
+}
+
+.one-and-a-half-hour {
+  width: 180px;
+}
+
+.two-hour {
+  width: 240px;
+}
+
+footer {
+  margin-top: 25px;
 }
 
 .clear {

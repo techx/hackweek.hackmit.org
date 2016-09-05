@@ -47,7 +47,7 @@ var SCHEDULE = [
         title: 'Lightning talks', 
         description: 'Fun with Integrated IMUs (David Wang) New micro controllers with embedded IMUs make motion based project easy. We\'ll discuss some of these new devices and projects ideas., Autonomous Cars (Jason), ~ (Bibit), Chen design talk',
         start: 19,
-        end: 21,
+        end: 20,
         people: []
       },
       {
