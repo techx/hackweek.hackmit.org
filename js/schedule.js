@@ -63,8 +63,7 @@ var SCHEDULE = [
     date: '2016-09-16',
     items: [
       {
-        title: '',
-        description: 'Grill and Chill / Team Formation',
+        title: 'Grill and Chill / Team Formation',
         start: 17,
         end: 19,
         people: []

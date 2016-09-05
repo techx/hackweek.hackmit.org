@@ -10,20 +10,32 @@ var HackweekSchedule = (function() {
   
   function initHackweekSchedule() {
     var container = $(containerSel);
+
+    var firstTime = SCHEDULE.reduce(function(overallMin, day) {
+      return Math.min(overallMin, day.items.reduce(
+        function(dayMin, item) {
+          return Math.min(dayMin, item.start); 
+        },
+        Infinity
+      ));
+    }, Infinity);
+
     SCHEDULE.forEach(function(day) {
-      container.append(getDayHtml(day));
+      container.append(getDayHtml(firstTime, day));
     });
+
     var clear = document.createElement('div');
     clear.className = 'clear';
     container.appendChild(clear);
   }
 
-  function getDayHtml(day) {
+  function getDayHtml(firstTime, day) {
     var div = document.createElement('div');
     div.className = 'day';
     div.appendChild(getDateHtml(day.date));
-    div.appendChild(getTimesHtml(day.items));
-    div.appendChild(getEventsHtml(day.items));
+
+    div.appendChild(getTimesHtml(firstTime, day.items));
+    div.appendChild(getEventsHtml(firstTime, day.items));
     return div;
   }
 
@@ -34,11 +46,11 @@ var HackweekSchedule = (function() {
     return div;
   }
 
-  function getTimesHtml(items) {
+  function getTimesHtml(firstTime, items) {
     var times = document.createElement('div');
     times.className = 'times';
     if (items.length > 0) {
-      var lastEndTime = items[0].start;
+      var lastEndTime = firstTime;
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         var downTime = item.start - lastEndTime;
@@ -66,11 +78,11 @@ var HackweekSchedule = (function() {
     return times;
   }
 
-  function getEventsHtml(items) {
+  function getEventsHtml(firstTime, items) {
     var events = document.createElement('div');
     events.className = 'infos';
     if (items.length > 0) {
-      var lastEndTime = items[0].start;
+      var lastEndTime = firstTime;
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
         var downTime = item.start - lastEndTime;
@@ -132,7 +144,7 @@ var HackweekSchedule = (function() {
 
     var people = document.createElement('i');
     var small = document.createElement('small');
-    small.innerHTML = item.people[0];
+    small.innerHTML = item.people.length > 0 ? item.people[0] : '';
     people.appendChild(small);
 
     div.appendChild(title);
