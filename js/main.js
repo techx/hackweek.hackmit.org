@@ -42,7 +42,7 @@ var HackweekSchedule = (function() {
   function getDateHtml(date) {
     var div = document.createElement('div');
     div.className = 'date';
-    div.innerHTML = date;
+    div.innerHTML = getDate(date);
     return div;
   }
 
@@ -162,6 +162,10 @@ var HackweekSchedule = (function() {
     };
     console.log(duration);
     return durations[duration.toString()];
+  }
+
+  function getDate(date) {
+    return moment(date).format('ddd, MMM DD, YYYY');
   }
 
   function getTime(twentyFourHourTime) {
