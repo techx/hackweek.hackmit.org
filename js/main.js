@@ -119,11 +119,11 @@ var HackweekSchedule = (function() {
 
     var left = document.createElement('span');
     left.className = 'left';
-    left.innerHTML = (wasDownTime || wasFirstItem) ? item.start : '';
+    left.innerHTML = (wasDownTime || wasFirstItem) ? getTime(item.start) : '';
 
     var right = document.createElement('span');
     right.className = 'right';
-    right.innerHTML = item.end;
+    right.innerHTML = getTime(item.end);
 
     div.appendChild(left);
     div.appendChild(right);
@@ -162,6 +162,11 @@ var HackweekSchedule = (function() {
     };
     console.log(duration);
     return durations[duration.toString()];
+  }
+
+  function getTime(twentyFourHourTime) {
+    var num = twentyFourHourTime % 12;
+    return num + (twentyFourHourTime >= 12 ? 'p' : 'a');
   }
 
   return {
