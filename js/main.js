@@ -1,6 +1,7 @@
 // Hackweek Schedule
 // @author Anthony Liu
 // @date 2016/09/02
+// @version 0.2
 
 var HackweekSchedule = (function() {
   'use strict';
