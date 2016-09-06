@@ -16,9 +16,10 @@
 
 body {
   background: #fffefa;
+  font-family: Montserrat;
 }
 
-div {
+header, div {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -39,8 +40,10 @@ header {
 
 .headings {
   float: left;
-  margin-top: 24px;
+  margin-left: 25px;
+  margin-top: 23px;
   font-size: 16px;
+  letter-spacing: 5px;
 }
 
 .logo {
@@ -53,16 +56,17 @@ header {
 
 .day {
   clear: both;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .date {
   color: #0b3b4b;
+  margin-bottom: 5px;
 }
 
 .times {
   font-size: 10px;
-  color: #0b3b4b;
+  color: #2e6273;
   clear: both;
   display: block;
   margin-bottom: 3px;
@@ -81,12 +85,29 @@ header {
 .event {
   min-height: 75px;
   float: left;
-  background: #fc5454;
-  color: #fffefa;
-  border: 1px solid #fc5454;
 	box-shadow: -2px 2px 0px #0b3b4b;
   border-radius: 2px;
   padding: 5px;
+}
+
+.talk.event {
+  background: #4ecdc4;
+  color: #fffefa;
+}
+
+.workshop.event {
+  background: #fc5454;
+  color: #fffefa;
+}
+
+.lightning.event {
+  background: #c9d41b;
+  color: #fffefa;
+}
+
+.social.event {
+  background: #ffbc29;
+  color: #fffefa;
 }
 
 .empty {
@@ -120,7 +141,9 @@ header {
 }
 
 footer {
-  margin-top: 25px;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 75px;
 }
 
 .clear {

@@ -1,7 +1,7 @@
 // Hackweek Schedule
 // @author Anthony Liu
 // @date 2016/09/02
-// @version 0.2
+// @version 0.3
 
 var HackweekSchedule = (function() {
   'use strict';
@@ -136,7 +136,13 @@ var HackweekSchedule = (function() {
     var durationClass = getClassFromDuration(duration);
 
     var div = document.createElement('div');
-    div.className = durationClass + ' event';
+    var type = ({
+      'talk': 'talk',
+      'workshop': 'workshop',
+      'lightning': 'lightning',
+      'social': 'social'
+    })[item.type];
+    div.className = durationClass + ' ' + type + ' event';
     
     var title = document.createElement('div');
     title.className = 'title';
