@@ -136,7 +136,13 @@ var HackweekSchedule = (function() {
     var durationClass = getClassFromDuration(duration);
 
     var div = document.createElement('div');
-    div.className = durationClass + ' event';
+    var type = ({
+      'talk': 'talk',
+      'workshop': 'workshop',
+      'lightning': 'lightning',
+      'social': 'social'
+    })[item.type];
+    div.className = durationClass + ' ' + type + ' event';
     
     var title = document.createElement('div');
     title.className = 'title';
