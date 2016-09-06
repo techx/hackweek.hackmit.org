@@ -88,9 +88,8 @@ var HackweekSchedule = (function() {
         var downTime = item.start - lastEndTime;
         var wasDownTime = downTime > 0;
         for (var time = downTime; time > 0; time -= 0.5) {
-          var empty = time > 0.5 ? ' empty' : '';
           var space = document.createElement('div');
-          space.className = 'half-hour' + empty + ' block';
+          space.className = 'half-hour block';
           space.innerHTML = '&nbsp;';
           events.appendChild(space);
         }
