@@ -16,6 +16,7 @@
 
 body {
   background: #fffefa;
+  font-family: Montserrat;
 }
 
 div {
@@ -39,8 +40,10 @@ header {
 
 .headings {
   float: left;
-  margin-top: 24px;
+  margin-left: 25px;
+  margin-top: 23px;
   font-size: 16px;
+  letter-spacing: 5px;
 }
 
 .logo {
@@ -53,11 +56,12 @@ header {
 
 .day {
   clear: both;
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 .date {
   color: #0b3b4b;
+  margin-bottom: 5px;
 }
 
 .times {
@@ -120,7 +124,9 @@ header {
 }
 
 footer {
-  margin-top: 25px;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 75px;
 }
 
 .clear {
