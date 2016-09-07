@@ -88,6 +88,7 @@ header {
 	box-shadow: -2px 2px 0px #0b3b4b;
   border-radius: 2px;
   padding: 5px;
+  cursor: pointer;
 }
 
 .talk.event {

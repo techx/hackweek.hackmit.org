@@ -27,7 +27,7 @@ var HackweekSchedule = (function() {
 
     var clear = document.createElement('div');
     clear.className = 'clear';
-    container.appendChild(clear);
+    container.append(clear);
   }
 
   function getDayHtml(firstTime, day) {
@@ -36,7 +36,9 @@ var HackweekSchedule = (function() {
     div.appendChild(getDateHtml(day.date));
 
     div.appendChild(getTimesHtml(firstTime, day.items));
-    div.appendChild(getEventsHtml(firstTime, day.items));
+    div.appendChild(
+			getEventsHtml(firstTime, day.date, day.items)
+		);
     return div;
   }
 
@@ -79,7 +81,7 @@ var HackweekSchedule = (function() {
     return times;
   }
 
-  function getEventsHtml(firstTime, items) {
+  function getEventsHtml(firstTime, date, items) {
     var events = document.createElement('div');
     events.className = 'infos';
     if (items.length > 0) {
@@ -97,7 +99,7 @@ var HackweekSchedule = (function() {
 
         var wasFirstItem = i === 0;
         events.appendChild(
-          getEventHtml(item)
+          getEventHtml(date, item)
         );
 
         lastEndTime = item.end;
@@ -131,7 +133,7 @@ var HackweekSchedule = (function() {
     return div;
   }
 
-  function getEventHtml(item) {
+  function getEventHtml(date, item) {
     var duration = item.end - item.start;
     var durationClass = getClassFromDuration(duration);
 
@@ -150,11 +152,15 @@ var HackweekSchedule = (function() {
 
     var people = document.createElement('i');
     var small = document.createElement('small');
-    small.innerHTML = item.people.length > 0 ? item.people[0] : '';
+    small.innerHTML = item.people.join(', ');
     people.appendChild(small);
 
     div.appendChild(title);
     div.appendChild(people);
+
+    div.addEventListener('click', function() {
+			getModal(date, item).show();
+    });
 
     return div;
   }
@@ -166,17 +172,63 @@ var HackweekSchedule = (function() {
       '1.5': 'one-and-a-half-hour',
       '2': 'two-hour',
     };
-    console.log(duration);
     return durations[duration.toString()];
   }
 
-  function getDate(date) {
-    return moment(date).format('ddd, MMM DD, YYYY');
-  }
+  function getModal(date, item) {
+		var formattedDate = getDate(date);
+		var content = '<small>' + formattedDate + ', ';
+		content += getTime(item.start) + '-';
+		content += getTime(item.end) + '</small>';
+		content += '<br><b>' + item.title + '</b>';
+
+		if ('people' in item && item.people.length > 0) {
+			content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
+		}
+
+		if ('description' in item && item.description.length > 0) {
+			content += '<br>' + (item.description ? item.description : '');
+		}
+
+    return picoModal({
+      content: content,
+			modalStyles: function(styles) {
+				styles.background = '#fffefa';
+				styles.color = '#0b3b4b';
+				styles.fontFamily = 'Lato';
+				styles.minWidth = '50%';
+				styles.opacity = 0;
+				return styles;
+			},
+			overlayStyles: function(styles) {
+				styles.opacity = 0;
+				return styles;
+			},
+			closeStyles: function(styles) {
+				styles.outline = 'none';
+				styles.background = 'transparent';
+				return styles;
+			}
+    }).afterShow(function(modal){
+  	    $(modal.overlayElem()).animate({opacity: .5}, 160);
+  	    $(modal.modalElem()).animate({opacity: 1}, 160);
+  	}).beforeClose(function(modal, event) {
+      event.preventDefault();
+      $(modal.overlayElem()).add(modal.modalElem())
+          .animate(
+              { opacity: 0 },
+              { complete: modal.forceClose }
+          );
+		});
+	}
 
   function getTime(twentyFourHourTime) {
     var num = twentyFourHourTime % 12;
     return num + (twentyFourHourTime >= 12 ? 'p' : 'a');
+  }
+
+  function getDate(date) {
+    return moment(date).format('ddd, MMM DD, YYYY');
   }
 
   return {
