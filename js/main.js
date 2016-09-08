@@ -1,7 +1,7 @@
 // Hackweek Schedule
 // @author Anthony Liu
-// @date 2016/09/02
-// @version 0.3
+// @date 2016/09/08
+// @version 1.0
 
 var HackweekSchedule = (function() {
   'use strict';
@@ -151,6 +151,7 @@ var HackweekSchedule = (function() {
     title.innerHTML = item.title;
 
     var mobileTime = document.createElement('div');
+    mobileTime.className = 'mobile-time';
     mobileTime.innerHTML = getTime(item.start) + ' - ' + getTime(item.end);
 
     var people = document.createElement('i');

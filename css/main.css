@@ -15,6 +15,7 @@
 }
 
 body {
+  color: #0b3b4b;
   background: #fffefa;
   font-family: Montserrat;
 }
@@ -35,13 +36,12 @@ header {
   padding: 25px 20%;
   background: #0b3b4b;
   color: #fffefa;
-  text-align: center;
 }
 
 .headings {
   float: left;
   margin-left: 25px;
-  margin-top: 23px;
+  margin-top: 21px;
   font-size: 16px;
   letter-spacing: 5px;
 }
@@ -52,6 +52,21 @@ header {
   -webkit-transform: rotate(-20deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
   -ms-transform: rotate(-20deg); /* IE 9 */
   transform: rotate(-20deg);
+}
+
+.description {
+  margin-top: 25px;
+  clear: both;
+}
+
+.stripe {
+  height: 6px;
+  background: linear-gradient(to right, #fc5454 0%, #fc5454 20%, #ffe86b 20%, #ffe86b 40%, #4ecdc4 40%, #4ecdc4 60%, #ffbc29 60%, #ffbc29 80%, #c9d41b 80%, #c9d41b 100%);
+  margin: 25px 0 5px;
+}
+
+#container {
+	margin-top: -25px;
 }
 
 .day {
@@ -70,6 +85,10 @@ header {
   clear: both;
   display: block;
   margin-bottom: 3px;
+}
+
+.mobile-time {
+  display: none;
 }
 
 .infos {
@@ -161,6 +180,11 @@ footer {
   .page {
     padding: 0 5%;
   }
+
+  header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -178,6 +202,32 @@ footer {
   
   .two-hour {
     width: 180px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  header h1 {
+    font-size: 1.75em;
+  }
+
+  .headings {
+    margin-top: 24px;
+  }
+
+  .half-hour {
+    width: 40px;
+  }
+  
+  .one-hour {
+    width: 80px;
+  }
+  
+  .one-and-a-half-hour {
+    width: 120px;
+  }
+  
+  .two-hour {
+    width: 160px;
   }
 }
 
@@ -208,7 +258,15 @@ footer {
 		margin: 0 0 15px;
 	}
 
+	.stripe {
+	  height: 4px;
+	}
+
 	.times { display: none; } 
+
+  .mobile-time {
+    display: block;
+  }
 
   .infos {
     font-size: 16px;
