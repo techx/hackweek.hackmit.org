@@ -37,8 +37,8 @@ var HackweekSchedule = (function() {
 
     div.appendChild(getTimesHtml(firstTime, day.items));
     div.appendChild(
-			getEventsHtml(firstTime, day.date, day.items)
-		);
+      getEventsHtml(firstTime, day.date, day.items)
+    );
     return div;
   }
 
@@ -50,12 +50,29 @@ var HackweekSchedule = (function() {
   }
 
   function getTimesHtml(firstTime, items) {
+    var hoursToShow = items.reduce(function(carry, item) {
+      return carry.concat([item.start, item.end]);
+    }, []).sort().reduce(function(carry, item) {
+      if (carry[1] !== item) {
+        carry[0] = carry[0].concat([item]);
+        carry[1] = item;
+      }
+      return carry;
+    }, [[], false])[0];
+    var pseudoItems = [];
+    for (var i = 0; i < hoursToShow.length - 1; i++) {
+      pseudoItems.push({
+        start: hoursToShow[i],
+        end: hoursToShow[i+1]
+      });
+    }
+
     var times = document.createElement('div');
     times.className = 'times';
-    if (items.length > 0) {
+    if (hoursToShow.length > 0) {
       var lastEndTime = firstTime;
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
+      for (var i = 0; i < pseudoItems.length; i++) {
+        var item = pseudoItems[i];
         var downTime = item.start - lastEndTime;
         var wasDownTime = downTime > 0;
         for (var time = downTime; time > 0; time -= 0.5) {
@@ -82,6 +99,62 @@ var HackweekSchedule = (function() {
   }
 
   function getEventsHtml(firstTime, date, items) {
+    // identify conflicts and split into separate lists
+    var itemLists = resolveConflicts(items);
+
+    // combine the item lists
+    var div = document.createElement('div');
+    itemLists.forEach(function(itemList) {
+      div.appendChild(
+        getNonconflictingEventsHtml(firstTime, date, itemList)
+      );
+    });
+
+    return div;
+  }
+
+  function resolveConflicts(items) {
+    var itemLists = [];
+
+    for (var i = 0; i < items.length; i++) {
+      var firstCompatibleList = getConsistentList(
+        itemLists, items[i]
+      );
+      if (firstCompatibleList === -1) {
+        itemLists.push([]);
+        firstCompatibleList = itemLists.length - 1;
+      } 
+      itemLists[firstCompatibleList].push(items[i]);
+    }
+
+    return itemLists;
+  }
+
+  function getConsistentList(itemLists, item) {
+    for (var i = 0; i < itemLists.length; i++) {
+      if (isConsistent(itemLists[i], item)) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
+
+  function isConsistent(itemList, item) {
+    for (var i = 0; i < itemList.length; i++) {
+      if (eventsCoincide(itemList[i], item)) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  function eventsCoincide(a, b) {
+    return !(a.end <= b.start || a.start >= b.end);
+  }
+
+  function getNonconflictingEventsHtml(firstTime, date, items) {
     var events = document.createElement('div');
     events.className = 'infos';
     if (items.length > 0) {
@@ -164,7 +237,7 @@ var HackweekSchedule = (function() {
     div.appendChild(people);
 
     div.addEventListener('click', function() {
-			getModal(date, item).show();
+      getModal(date, item).show();
     });
 
     return div;
@@ -181,51 +254,51 @@ var HackweekSchedule = (function() {
   }
 
   function getModal(date, item) {
-		var formattedDate = getDate(date);
-		var content = '<small>' + formattedDate + ', ';
-		content += getTime(item.start) + '-';
-		content += getTime(item.end) + '</small>';
-		content += '<br><b>' + item.title + '</b>';
+    var formattedDate = getDate(date);
+    var content = '<small>' + formattedDate + ', ';
+    content += getTime(item.start) + '-';
+    content += getTime(item.end) + '</small>';
+    content += '<br><b>' + item.title + '</b>';
 
-		if ('people' in item && item.people.length > 0) {
-			content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
-		}
+    if ('people' in item && item.people.length > 0) {
+      content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
+    }
 
-		if ('description' in item && item.description.length > 0) {
-			content += '<br>' + (item.description ? item.description : '');
-		}
+    if ('description' in item && item.description.length > 0) {
+      content += '<br>' + (item.description ? item.description : '');
+    }
 
     return picoModal({
       content: content,
-			modalStyles: function(styles) {
-				styles.background = '#fffefa';
-				styles.color = '#0b3b4b';
-				styles.fontFamily = 'Lato';
-				styles.width = '80%';
-				styles.opacity = 0;
-				return styles;
-			},
-			overlayStyles: function(styles) {
-				styles.opacity = 0;
-				return styles;
-			},
-			closeStyles: function(styles) {
-				styles.outline = 'none';
-				styles.background = 'transparent';
-				return styles;
-			}
+      modalStyles: function(styles) {
+        styles.background = '#fffefa';
+        styles.color = '#0b3b4b';
+        styles.fontFamily = 'Lato';
+        styles.width = '80%';
+        styles.opacity = 0;
+        return styles;
+      },
+      overlayStyles: function(styles) {
+        styles.opacity = 0;
+        return styles;
+      },
+      closeStyles: function(styles) {
+        styles.outline = 'none';
+        styles.background = 'transparent';
+        return styles;
+      }
     }).afterShow(function(modal){
-  	    $(modal.overlayElem()).animate({opacity: .5}, 160);
-  	    $(modal.modalElem()).animate({opacity: 1}, 160);
-  	}).beforeClose(function(modal, event) {
+        $(modal.overlayElem()).animate({opacity: .5}, 160);
+        $(modal.modalElem()).animate({opacity: 1}, 160);
+    }).beforeClose(function(modal, event) {
       event.preventDefault();
       $(modal.overlayElem()).add(modal.modalElem())
           .animate(
               { opacity: 0 },
               { complete: modal.forceClose }
           );
-		});
-	}
+    });
+  }
 
   function getTime(twentyFourHourTime) {
     var num = twentyFourHourTime % 12;
