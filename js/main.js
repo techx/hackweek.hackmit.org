@@ -37,8 +37,8 @@ var HackweekSchedule = (function() {
 
     div.appendChild(getTimesHtml(firstTime, day.items));
     div.appendChild(
-			getEventsHtml(firstTime, day.date, day.items)
-		);
+      getEventsHtml(firstTime, day.date, day.items)
+    );
     return div;
   }
 
@@ -164,7 +164,7 @@ var HackweekSchedule = (function() {
     div.appendChild(people);
 
     div.addEventListener('click', function() {
-			getModal(date, item).show();
+      getModal(date, item).show();
     });
 
     return div;
@@ -181,51 +181,51 @@ var HackweekSchedule = (function() {
   }
 
   function getModal(date, item) {
-		var formattedDate = getDate(date);
-		var content = '<small>' + formattedDate + ', ';
-		content += getTime(item.start) + '-';
-		content += getTime(item.end) + '</small>';
-		content += '<br><b>' + item.title + '</b>';
+    var formattedDate = getDate(date);
+    var content = '<small>' + formattedDate + ', ';
+    content += getTime(item.start) + '-';
+    content += getTime(item.end) + '</small>';
+    content += '<br><b>' + item.title + '</b>';
 
-		if ('people' in item && item.people.length > 0) {
-			content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
-		}
+    if ('people' in item && item.people.length > 0) {
+      content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
+    }
 
-		if ('description' in item && item.description.length > 0) {
-			content += '<br>' + (item.description ? item.description : '');
-		}
+    if ('description' in item && item.description.length > 0) {
+      content += '<br>' + (item.description ? item.description : '');
+    }
 
     return picoModal({
       content: content,
-			modalStyles: function(styles) {
-				styles.background = '#fffefa';
-				styles.color = '#0b3b4b';
-				styles.fontFamily = 'Lato';
-				styles.width = '80%';
-				styles.opacity = 0;
-				return styles;
-			},
-			overlayStyles: function(styles) {
-				styles.opacity = 0;
-				return styles;
-			},
-			closeStyles: function(styles) {
-				styles.outline = 'none';
-				styles.background = 'transparent';
-				return styles;
-			}
+      modalStyles: function(styles) {
+        styles.background = '#fffefa';
+        styles.color = '#0b3b4b';
+        styles.fontFamily = 'Lato';
+        styles.width = '80%';
+        styles.opacity = 0;
+        return styles;
+      },
+      overlayStyles: function(styles) {
+        styles.opacity = 0;
+        return styles;
+      },
+      closeStyles: function(styles) {
+        styles.outline = 'none';
+        styles.background = 'transparent';
+        return styles;
+      }
     }).afterShow(function(modal){
-  	    $(modal.overlayElem()).animate({opacity: .5}, 160);
-  	    $(modal.modalElem()).animate({opacity: 1}, 160);
-  	}).beforeClose(function(modal, event) {
+        $(modal.overlayElem()).animate({opacity: .5}, 160);
+        $(modal.modalElem()).animate({opacity: 1}, 160);
+    }).beforeClose(function(modal, event) {
       event.preventDefault();
       $(modal.overlayElem()).add(modal.modalElem())
           .animate(
               { opacity: 0 },
               { complete: modal.forceClose }
           );
-		});
-	}
+    });
+  }
 
   function getTime(twentyFourHourTime) {
     var num = twentyFourHourTime % 12;
