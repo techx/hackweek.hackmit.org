@@ -150,3 +150,46 @@ footer {
 .clear {
   clear: both;
 }
+
+@media only screen and (max-width: 480px) {
+  body {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+	header {
+		padding: 0 10%;
+    overflow-x: hidden;
+	}
+
+	.page {
+		padding: 0 5%;
+	}
+
+	.logo {
+		float: none;
+		width: 100%;
+	}
+
+	.headings {
+		float: none;
+		text-align: center;
+		margin: 0 0 25px;
+	}
+
+	.times { display: none; } 
+
+	.block {
+		display: none;
+	}
+  
+  .event {
+    margin-bottom: 5px;
+  }
+
+	.half-hour { width: 100%; }
+	.one-hour { width: 100%; }
+	.one-and-a-half-hour { width: 100%; }
+	.two-hour { width: 100%; }
+}
