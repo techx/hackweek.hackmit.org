@@ -50,14 +50,29 @@ var HackweekSchedule = (function() {
   }
 
   function getTimesHtml(firstTime, items) {
-    // get start and end times of every event
+    var hoursToShow = items.reduce(function(carry, item) {
+      return carry.concat([item.start, item.end]);
+    }, []).sort().reduce(function(carry, item) {
+      if (carry[1] !== item) {
+        carry[0] = carry[0].concat([item]);
+        carry[1] = item;
+      }
+      return carry;
+    }, [[], false])[0];
+    var pseudoItems = [];
+    for (var i = 0; i < hoursToShow.length - 1; i++) {
+      pseudoItems.push({
+        start: hoursToShow[i],
+        end: hoursToShow[i+1]
+      });
+    }
 
     var times = document.createElement('div');
     times.className = 'times';
-    if (items.length > 0) {
+    if (hoursToShow.length > 0) {
       var lastEndTime = firstTime;
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
+      for (var i = 0; i < pseudoItems.length; i++) {
+        var item = pseudoItems[i];
         var downTime = item.start - lastEndTime;
         var wasDownTime = downTime > 0;
         for (var time = downTime; time > 0; time -= 0.5) {
@@ -111,8 +126,6 @@ var HackweekSchedule = (function() {
       } 
       itemLists[firstCompatibleList].push(items[i]);
     }
-
-    console.log(itemLists);
 
     return itemLists;
   }
