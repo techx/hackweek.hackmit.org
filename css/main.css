@@ -95,6 +95,7 @@ header {
   font-size: 14px;
   clear: both;
   display: block;
+  margin-top: 4px;
 }
 
 .block {
@@ -142,6 +143,10 @@ header {
 .right {
   float: right;
   text-align: right;
+}
+
+.offset-one-hour {
+  margin-left: 130px;
 }
 
 .half-hour {

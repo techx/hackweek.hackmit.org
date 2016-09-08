@@ -12,8 +12,8 @@ var SCHEDULE = [
       {
         type: 'workshop',
         title: 'Intro Web Dev',
-        start: 20,
-        end: 22,
+        start: 18,
+        end: 20,
         people: ['Budmonde D']
       }
     ]

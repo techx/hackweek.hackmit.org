@@ -50,6 +50,8 @@ var HackweekSchedule = (function() {
   }
 
   function getTimesHtml(firstTime, items) {
+    // get start and end times of every event
+
     var times = document.createElement('div');
     times.className = 'times';
     if (items.length > 0) {
@@ -82,6 +84,64 @@ var HackweekSchedule = (function() {
   }
 
   function getEventsHtml(firstTime, date, items) {
+    // identify conflicts and split into separate lists
+    var itemLists = resolveConflicts(items);
+
+    // combine the item lists
+    var div = document.createElement('div');
+    itemLists.forEach(function(itemList) {
+      div.appendChild(
+        getNonconflictingEventsHtml(firstTime, date, itemList)
+      );
+    });
+
+    return div;
+  }
+
+  function resolveConflicts(items) {
+    var itemLists = [];
+
+    for (var i = 0; i < items.length; i++) {
+      var firstCompatibleList = getConsistentList(
+        itemLists, items[i]
+      );
+      if (firstCompatibleList === -1) {
+        itemLists.push([]);
+        firstCompatibleList = itemLists.length - 1;
+      } 
+      itemLists[firstCompatibleList].push(items[i]);
+    }
+
+    console.log(itemLists);
+
+    return itemLists;
+  }
+
+  function getConsistentList(itemLists, item) {
+    for (var i = 0; i < itemLists.length; i++) {
+      if (isConsistent(itemLists[i], item)) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
+
+  function isConsistent(itemList, item) {
+    for (var i = 0; i < itemList.length; i++) {
+      if (eventsCoincide(itemList[i], item)) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  function eventsCoincide(a, b) {
+    return !(a.end <= b.start || a.start >= b.end);
+  }
+
+  function getNonconflictingEventsHtml(firstTime, date, items) {
     var events = document.createElement('div');
     events.className = 'infos';
     if (items.length > 0) {
