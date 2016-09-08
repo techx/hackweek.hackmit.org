@@ -150,12 +150,16 @@ var HackweekSchedule = (function() {
     title.className = 'title';
     title.innerHTML = item.title;
 
+    var mobileTime = document.createElement('div');
+    mobileTime.innerHTML = getTime(item.start) + ' - ' + getTime(item.end);
+
     var people = document.createElement('i');
-    var small = document.createElement('small');
-    small.innerHTML = item.people.join(', ');
-    people.appendChild(small);
+    var smallPeople = document.createElement('small');
+    smallPeople.innerHTML = item.people.join(', ');
+    people.appendChild(smallPeople);
 
     div.appendChild(title);
+    div.appendChild(mobileTime);
     div.appendChild(people);
 
     div.addEventListener('click', function() {
@@ -196,7 +200,7 @@ var HackweekSchedule = (function() {
 				styles.background = '#fffefa';
 				styles.color = '#0b3b4b';
 				styles.fontFamily = 'Lato';
-				styles.minWidth = '50%';
+				styles.width = '80%';
 				styles.opacity = 0;
 				return styles;
 			},
