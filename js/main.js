@@ -151,6 +151,7 @@ var HackweekSchedule = (function() {
     title.innerHTML = item.title;
 
     var mobileTime = document.createElement('div');
+    mobileTime.className = 'mobile-time';
     mobileTime.innerHTML = getTime(item.start) + ' - ' + getTime(item.end);
 
     var people = document.createElement('i');

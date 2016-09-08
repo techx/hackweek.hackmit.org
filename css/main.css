@@ -41,7 +41,7 @@ header {
 .headings {
   float: left;
   margin-left: 25px;
-  margin-top: 23px;
+  margin-top: 21px;
   font-size: 16px;
   letter-spacing: 5px;
 }
@@ -70,6 +70,10 @@ header {
   clear: both;
   display: block;
   margin-bottom: 3px;
+}
+
+.mobile-time {
+  display: none;
 }
 
 .infos {
@@ -161,6 +165,11 @@ footer {
   .page {
     padding: 0 5%;
   }
+
+  header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @media only screen and (max-width: 760px) {
@@ -178,6 +187,32 @@ footer {
   
   .two-hour {
     width: 180px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  header h1 {
+    font-size: 1.75em;
+  }
+
+  .headings {
+    margin-top: 24px;
+  }
+
+  .half-hour {
+    width: 40px;
+  }
+  
+  .one-hour {
+    width: 80px;
+  }
+  
+  .one-and-a-half-hour {
+    width: 120px;
+  }
+  
+  .two-hour {
+    width: 160px;
   }
 }
 
@@ -209,6 +244,10 @@ footer {
 	}
 
 	.times { display: none; } 
+
+  .mobile-time {
+    display: block;
+  }
 
   .infos {
     font-size: 16px;
