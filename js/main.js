@@ -223,9 +223,13 @@ var HackweekSchedule = (function() {
     title.className = 'title';
     title.innerHTML = item.title;
 
-    var mobileTime = document.createElement('div');
-    mobileTime.className = 'mobile-time';
-    mobileTime.innerHTML = getTime(item.start) + ' - ' + getTime(item.end);
+    var loc = document.createElement('div');
+    loc.className = 'location';
+    loc.innerHTML = item.location;
+
+    var mobile = document.createElement('div');
+    mobile.className = 'mobile';
+    mobile.innerHTML = getTime(item.start) + ' - ' + getTime(item.end) + ' in ' + item.location;
 
     var people = document.createElement('i');
     var smallPeople = document.createElement('small');
@@ -233,7 +237,8 @@ var HackweekSchedule = (function() {
     people.appendChild(smallPeople);
 
     div.appendChild(title);
-    div.appendChild(mobileTime);
+    div.appendChild(loc);
+    div.appendChild(mobile);
     div.appendChild(people);
 
     div.addEventListener('click', function() {
