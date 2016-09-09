@@ -260,10 +260,11 @@ var HackweekSchedule = (function() {
 
   function getModal(date, item) {
     var formattedDate = getDate(date);
-    var content = '<small>' + formattedDate + ', ';
+    var content = '<small>' + formattedDate + ', <b>';
     content += getTime(item.start) + '-';
-    content += getTime(item.end) + '</small>';
-    content += '<br><b>' + item.title + '</b>';
+    content += getTime(item.end) + '</b> in <b>' + item.location;
+    content += '</b></small>';
+    content += '<br><b>' + item.title + ' [' + item.type + ']</b>';
 
     if ('people' in item && item.people.length > 0) {
       content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
