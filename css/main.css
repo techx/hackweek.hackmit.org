@@ -87,7 +87,7 @@ header {
   margin-bottom: 3px;
 }
 
-.mobile-time {
+.mobile {
   display: none;
 }
 
@@ -269,7 +269,11 @@ footer {
 
 	.times { display: none; } 
 
-  .mobile-time {
+  .location {
+    display: none;
+  }
+
+  .mobile {
     display: block;
   }
 
