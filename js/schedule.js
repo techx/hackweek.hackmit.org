@@ -7,8 +7,8 @@ var SCHEDULE = [
         location: '3-370',
         title: 'Fundamentals of Version Control',
         description: 'Learn about how to manage your code\'s development history collaboratively with Git! We\'ll teach you how to use the command line, understand the Git tree, and choose Git commands as your team works together on a shared codebase.',
-        start: 17,
-        end: 19,
+        start: 19,
+        end: 20,
         people: ['David Wong']
       },
       {
