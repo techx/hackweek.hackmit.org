@@ -264,7 +264,7 @@ var HackweekSchedule = (function() {
     content += getTime(item.start) + '-';
     content += getTime(item.end) + '</b> in <b>' + item.location;
     content += '</b></small>';
-    content += '<br><b>' + item.title + ' [' + item.type + ']</b>';
+    content += '<br><b><a href="'+ item.fblink +'">' + item.title + ' [' + item.type + ']</a></b>';
 
     if ('people' in item && item.people.length > 0) {
       content += '<br><small><i>' + item.people.join(', ') + '</i></small>';
