@@ -9,7 +9,8 @@ var SCHEDULE = [
         description: 'Learn about how to manage your code\'s development history collaboratively with Git! We\'ll teach you how to use the command line, understand the Git tree, and choose Git commands as your team works together on a shared codebase.',
         start: 17,
         end: 19,
-        people: ['David Wong']
+        people: ['David Wong'],
+        fblink: "https://www.facebook.com/events/1785259995030824/"
       },
       {
         type: 'workshop',
@@ -18,7 +19,8 @@ var SCHEDULE = [
         description: 'A brief overview of what is, makes and runs a web application. Learn about conventional web server architectures as well as good organizational practices followed by a very quick workshop on a Demo Web App using Express.js.',
         start: 20,
         end: 22,
-        people: ['Budmonde D']
+        people: ['Budmonde D'],
+        fblink: "https://www.facebook.com/events/759725100797958/"
       }
     ]
   },
@@ -32,7 +34,8 @@ var SCHEDULE = [
         description: 'Learn the basics of wiring and coding up an Arduino theremin using two distance sensors: one to control pitch and one to control volume. The distance sensors react to how far the user\'s hand is from each sensor. This workshop is aimed at people who know the basics of coding and want a cool project to help them learn more. :)',
         start: 19,
         end: 21,
-        people: ['Brenda Zanze', 'Jocelyn Lorrey']
+        people: ['Brenda Zanze', 'Jocelyn Lorrey'],
+        fblink: "https://www.facebook.com/events/164295704012709/"
       }
     ]
   },
@@ -46,7 +49,8 @@ var SCHEDULE = [
         description: 'Step in a shallow puddle of deep learning: an overview of deep learning from data formatting to running your models using Torch 7.',
         start: 19,
         end: 21,
-        people: ['Nick Hynes']
+        people: ['Nick Hynes'],
+        fblink: "https://www.facebook.com/events/1207942789227057/"
       }
     ]
   },
@@ -60,7 +64,8 @@ var SCHEDULE = [
         description: 'Fun with Integrated IMUs, Autonomous Cars, Design in 36 Hours: Ideating 101, and more!',
         start: 19,
         end: 20,
-        people: ['David Wang', 'Jason Ma', 'Elizabeth Bianchini', 'Chen Ye']
+        people: ['David Wang', 'Jason Ma', 'Elizabeth Bianchini', 'Chen Ye'],
+        fblink: "https://www.facebook.com/events/654844601350558/"
       },
       {
         type: 'talk',
@@ -69,7 +74,8 @@ var SCHEDULE = [
         description: 'There are an amazing variety of programming languages - ranging from the commonly used to the extremely esoteric. Come learn about some of the basic ways in which these languages differ--functional vs. imperative, typed vs. untyped, compiled vs. interpreted--as we bring you on a whirlwind tour of the languages we (kind of) know.',
         start: 20,
         end: 21,
-        people: ['Vincent Tjeng', 'Daniel Richman']
+        people: ['Vincent Tjeng', 'Daniel Richman'],
+        fblink: "https://www.facebook.com/events/664267830388369/"
       }
     ]
   },
@@ -83,7 +89,8 @@ var SCHEDULE = [
         description: 'Come hang out with other hackers, discuss project ideas, and eat some tasty burgers! Meat and non-meat burgers offered.',
         start: 17,
         end: 19,
-        people: []
+        people: [],
+        fblink: "https://www.facebook.com/events/240371473025100/"
       },
       {
         type: 'workshop',
@@ -92,7 +99,8 @@ var SCHEDULE = [
         description: 'I2C, SPI, ISRs... What do they all mean? How do you take full advantage of your Arduinos and build better hardware? Why not take advantage of hundreds of inexpensive sensors? Why not improve the efficiency of your embedded code? Come learn about data busses, peripherals, and advanced language tools to take your embedded device to the next level.',
         start: 19,
         end: 20,
-        people: ['Logan Garbarini']
+        people: ['Logan Garbarini'],
+        fblink: "https://www.facebook.com/events/550700495123542/"
       },
       {
         type: 'talk',
@@ -101,7 +109,8 @@ var SCHEDULE = [
         description: 'Learn about some methods of data acquisition using ordinary microcontrollers and how to build a pocket oscilloscope using an Arduino. What are the benefits of using high end microcontrollers? What if you choose a FPGA instead? The systems presented will be able to perform from 1MSPS up to 100MSPS. Also learn the advantages of doing signal processing in the FPGA, and why it\'s faster than a computer.',
         start: 20,
         end: 21,
-        people: ['Vlad Niculescu']
+        people: ['Vlad Niculescu'],
+        fblink: "https://www.facebook.com/events/588870034653737/"
       },
       {
         type: 'talk',
@@ -110,7 +119,8 @@ var SCHEDULE = [
         description: 'Want to make cool hardware hacks but barely know C++? Have a project idea that needs too much CPU and memory for a simple Arduino to handle? Need to easily control your hack from your laptop? Here\'s how to make the coolest but easiest hardware hack you\'ve ever made!',
         start: 20,
         end: 21,
-        people: ['Cyrus Roshan', 'Akhilesh Yarabarla']
+        people: ['Cyrus Roshan', 'Akhilesh Yarabarla'],
+        fblink: "https://www.facebook.com/events/173029779801231/"
       }
     ]
   }
