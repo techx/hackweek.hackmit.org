@@ -26,6 +26,26 @@ header, div {
   -webkit-box-sizing: border-box;
 }
 
+a:link {
+    text-decoration: none;
+    color:#0b3b4b;
+    outline: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#0b3b4b;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
 .page {
   width: 100%;
   padding: 0 20%;
