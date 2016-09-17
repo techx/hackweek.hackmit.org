@@ -99,7 +99,7 @@ var SCHEDULE = [
         location: '1-190',
         title: 'Data Acquisition',
         description: 'Learn about some methods of data acquisition using ordinary microcontrollers and how to build a pocket oscilloscope using an Arduino. What are the benefits of using high end microcontrollers? What if you choose a FPGA instead? The systems presented will be able to perform from 1MSPS up to 100MSPS. Also learn the advantages of doing signal processing in the FPGA, and why it\'s faster than a computer.',
-        start: 20,
+        start: 20.5,
         end: 21,
         people: ['Vlad Niculescu']
       },
@@ -108,7 +108,7 @@ var SCHEDULE = [
         location: '3-270',
         title: 'Turn Hardware into Easyware with JavaScript',
         description: 'Want to make cool hardware hacks but barely know C++? Have a project idea that needs too much CPU and memory for a simple Arduino to handle? Need to easily control your hack from your laptop? Here\'s how to make the coolest but easiest hardware hack you\'ve ever made!',
-        start: 20,
+        start: 20.5,
         end: 21,
         people: ['Cyrus Roshan', 'Akhilesh Yarabarla']
       }
