@@ -308,7 +308,13 @@ var HackweekSchedule = (function() {
 
   function getTime(twentyFourHourTime) {
     var num = twentyFourHourTime % 12;
-    return num + (twentyFourHourTime >= 12 ? 'p' : 'a');
+    var hour = Math.floor(num);
+    var mins = Math.floor(60 * (num - hour));
+    var str = hour;
+    if (mins !== 0) {
+      str += ':' + mins;
+    }
+    return str + ((twentyFourHourTime >= 12) ? 'p' : 'a');
   }
 
   function getDate(date) {
