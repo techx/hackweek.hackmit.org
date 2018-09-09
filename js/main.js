@@ -214,7 +214,7 @@ var HackweekSchedule = (function() {
     var type = ({
       'talk': 'talk',
       'workshop': 'workshop',
-      'lightning': 'lightning',
+      'panel': 'panel',
       'social': 'social'
     })[item.type];
     div.className = durationClass + ' ' + type + ' event';

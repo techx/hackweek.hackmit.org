@@ -1,127 +1,113 @@
 var SCHEDULE = [
-  {
-    date: '2016-09-12',
-    items: [
-      {
-        type: 'workshop',
-        location: '3-370',
-        title: 'Fundamentals of Version Control',
-        description: 'Learn about how to manage your code\'s development history collaboratively with Git! We\'ll teach you how to use the command line, understand the Git tree, and choose Git commands as your team works together on a shared codebase.',
-        start: 19,
-        end: 20,
-        people: ['David Wong'],
-        fblink: "https://www.facebook.com/events/1785259995030824/"
-      },
-      {
-        type: 'workshop',
-        location: '3-370',
-        title: 'Intro Web Dev',
-        description: 'A brief overview of what is, makes and runs a web application. Learn about conventional web server architectures as well as good organizational practices followed by a very quick workshop on a Demo Web App using Express.js.',
-        start: 20,
-        end: 22,
-        people: ['Budmonde D'],
-        fblink: "https://www.facebook.com/events/759725100797958/"
-      }
-    ]
-  },
-  {
-    date: '2016-09-13',
-    items: [
-      {
-        type: 'workshop',
-        location: '1-190',
-        title: 'Distance Sensor Theremin',
-        description: 'Learn the basics of wiring and coding up an Arduino theremin using two distance sensors: one to control pitch and one to control volume. The distance sensors react to how far the user\'s hand is from each sensor. This workshop is aimed at people who know the basics of coding and want a cool project to help them learn more. :)',
-        start: 19,
-        end: 21,
-        people: ['Brenda Zanze', 'Jocelyn Lorrey'],
-        fblink: "https://www.facebook.com/events/164295704012709/"
-      }
-    ]
-  },
-  {
-    date: '2016-09-14',
-    items: [
-      {
-        type: 'workshop',
-        location: '1-190',
-        title: 'Warming Up to Deep Learning Using Torch 7', 
-        description: 'Step in a shallow puddle of deep learning: an overview of deep learning from data formatting to running your models using Torch 7.',
-        start: 19,
-        end: 21,
-        people: ['Nick Hynes'],
-        fblink: "https://www.facebook.com/events/1207942789227057/"
-      }
-    ]
-  },
-  {
-    date: '2016-09-15',
-    items: [
-      {
-        type: 'lightning',
-        location: '1-190',
-        title: 'Lightning Talks', 
-        description: 'Fun with Integrated IMUs, Autonomous Cars, Design in 36 Hours: Ideating 101, and more!',
-        start: 19,
-        end: 20,
-        people: ['David Wang', 'Jason Ma', 'Elizabeth Bianchini', 'Chen Ye'],
-        fblink: "https://www.facebook.com/events/654844601350558/"
-      },
-      {
-        type: 'talk',
-        location: '1-190',
-        title: 'A Whirlwind Tour of Programming Languages ',
-        description: 'There are an amazing variety of programming languages - ranging from the commonly used to the extremely esoteric. Come learn about some of the basic ways in which these languages differ--functional vs. imperative, typed vs. untyped, compiled vs. interpreted--as we bring you on a whirlwind tour of the languages we (kind of) know.',
-        start: 20,
-        end: 21,
-        people: ['Vincent Tjeng', 'Daniel Richman'],
-        fblink: "https://www.facebook.com/events/664267830388369/"
-      }
-    ]
-  },
-  {
-    date: '2016-09-16',
-    items: [
-      {
-        type: 'social',
-        location: 'Kresge BBQ Pits',
-        title: 'Grill and Chill / Team Formation',
-        description: 'Come hang out with other hackers, discuss project ideas, and eat some tasty burgers! Meat and non-meat burgers offered.',
-        start: 17,
+    {
+      date: '2018-09-11',
+      items: [
+        {
+          type: 'panel',
+          location: '3-270',
+          title: 'How to Hack Panel',
+          description: 'Learn how to build a successful hackathon project -- hear about the experiences of successful hackers from TechX as they give tips and tricks about the hackathon process, from start to finish. We also have a Q&A panel of hackers who\'ve worked together and won major hackathons, so that you can learn how to do the same.\nFood from Pepper Sky will be served.',
+          start: 18,
+          end: 19.5,
+          people: ['Shreyas Kapur, Neena Dugar, Avery Lamp, Jessy Lin'],
+          fblink: "https://www.facebook.com/events/1884606518515780/"
+        },
+        {
+          type: 'workshop',
+          location: '3-270',
+          title: 'Solidity Workshop by MIT Bitcoin Club',
+          description: 'The MIT Bitcoin Club will be hosting a solidity (blockchain) workshop - open to all! Join us to learn and see if you want to create a blockchain project at HackMIT.\nInsomnia cookies will be provided.',
+          start: 20,
+          end: 21,
+          people: ['MIT Bitcoin Club'],
+          fblink: "https://www.facebook.com/events/1892668404373854/"
+        }
+      ]
+    },
+    {
+      date: '2018-09-12',
+      items: [
+        {
+          type: 'talk',
+          location: 'Coffehouse Lounge',
+          title: 'Ben Fry Fireside',
+          description: 'Join us for a fireside chat with Ben Fry! \nBen Fry is founder and principal of Fathom Information Design, a design and software consultancy located in Boston. He holds a Ph.D. from the MIT Media Laboratory and recently joined MIT as a Lecturer. Fry has authored and co-authored multiple books and develops "Processing" — the programming environment he co-created with Casey Reas used by artists, engineers, scientists, and students all over the world. His work can be found in museums, feature films, research labs, and the portfolios of Fathom\'s clients such as Nike, Samsung, DARPA, and ProPublica. In 2011, Fry visited the White House to receive the National Design Award for Interaction Design.\nFood from Jose\'s Mexican will be served.',
+          start: 18,
           end: 19,
-        people: [],
-        fblink: "https://www.facebook.com/events/240371473025100/"
-      },
-      {
-        type: 'workshop',
-        location: '1-190',
-        title: 'Advanced Topics in Arduino ',
-        description: 'I2C, SPI, ISRs... What do they all mean? How do you take full advantage of your Arduinos and build better hardware? Why not take advantage of hundreds of inexpensive sensors? Why not improve the efficiency of your embedded code? Come learn about data busses, peripherals, and advanced language tools to take your embedded device to the next level.',
-        start: 19,
-        end: 20,
-        people: ['Logan Garbarini'],
-        fblink: "https://www.facebook.com/events/550700495123542/"
-      },
-      {
-        type: 'talk',
-        location: '1-190',
-        title: 'Data Acquisition',
-        description: 'Learn about some methods of data acquisition using ordinary microcontrollers and how to build a pocket oscilloscope using an Arduino. What are the benefits of using high end microcontrollers? What if you choose a FPGA instead? The systems presented will be able to perform from 1MSPS up to 100MSPS. Also learn the advantages of doing signal processing in the FPGA, and why it\'s faster than a computer.',
-        start: 20.5,
-        end: 21,
-        people: ['Vlad Niculescu'],
-        fblink: "https://www.facebook.com/events/588870034653737/"
-      },
-      {
-        type: 'talk',
-        location: '3-270',
-        title: 'Turn Hardware into Easyware with JavaScript',
-        description: 'Want to make cool hardware hacks but barely know C++? Have a project idea that needs too much CPU and memory for a simple Arduino to handle? Need to easily control your hack from your laptop? Here\'s how to make the coolest but easiest hardware hack you\'ve ever made!',
-        start: 20.5,
-        end: 21,
-        people: ['Cyrus Roshan', 'Akhilesh Yarabarla'],
-        fblink: "https://www.facebook.com/events/173029779801231/"
-      }
-    ]
-  }
-];
+          people: ['Ben Fry'],
+          fblink: "https://www.facebook.com/events/2151010561784188/"
+        },
+        {
+          type: 'talk',
+          location: 'Coffehouse Lounge',
+          title: 'Laws of Hacking by BU/MIT Cyberlaw Clinic',
+          description: 'Join attorneys from the BU/MIT Technology & Cyberlaw Clinic for a discussion about the legal issues you can run into while engaged in hackathon projects, and how to use those laws to further your work. We\'ll talk about laws you may encounter while reverse engineering, experimenting on websites, scraping data, and other common hacking projects, and how MIT students can take advantage of our legal resources. \nThe BU/MIT Technology & Cyberlaw Clinic is a legal service for students at MIT and BU who run into legal questions related to their technology projects and ventures. We focus on legal issues in data privacy, cybersecurity, intellectual property, access to government information, and technology regulation and compliance. You can use our services if you\'re curious or concerned about an area of law or need help responding to a particular legal threat or issue. The Clinic is free, and is staffed by students at BU Law under the supervision of technology law attorneys. \nFor more about the Clinic, visit https://sites.bu.edu/tclc/.\nFood from Desi Dhaba will be served.',
+          start: 19.5,
+          end: 20.5,
+          people: ['BU/MIT Cyberlaw Clinic'],
+          fblink: "https://www.facebook.com/events/304257743685167/"
+        }
+      ]
+    },
+    {
+      date: '2018-09-13',
+      items: [
+        {
+          type: 'social',
+          location: 'Lobby 10',
+          title: 'Technology Demo Event by a16z', 
+          description: 'Swing by our technology demo event hosted by Andreessen Horowitz (a16z), a VC firm based in California. See and experience the technology of more than 8 portfolio companies from a16z! We\'ll be in Lobby 10 from 6:30-8:30 on Thursday.\nChipotle dinner will be provided.',
+          start: 18.5,
+          end: 20.5,
+          people: ['a16z'],
+          fblink: "https://www.facebook.com/events/233507173982925/"
+        },
+        {
+          type: 'workshop',
+          location: '3-270',
+          title: 'API/Webdev Workshop', 
+          description: 'Learn how to use the endless data and wide variety of powerful tools available to you on the web. This is geared towards beginners with little to no knowledge of building websites or automatically gathering data from the Internet.\nBring your laptop and make sure you have a text editor installed so that you can follow along with the workshop.\nDesserts from Flour will be served.',
+          start: 20.5,
+          end: 21.5,
+          people: ['Rahul Yesantharao, Anton Cao'],
+          fblink: "https://www.facebook.com/events/287193398545204/"
+        }
+      ]
+    },
+    {
+      date: '2018-09-14',
+      items: [
+        {
+          type: 'workshop',
+          location: '3-270',
+          title: '3D Models and AR in iOS Workshop by MIT Animation Club', 
+          description: 'Want to learn about how to make iOS apps with 3D models and augmented reality? This workshop will guide you through the app creation process with Xcode and teach you how to add augmented reality and 3D models to your iOS projects. Beginners are welcome!\nFood from Oasis will be served.',
+          start: 18,
+          end: 19,
+          people: ['MIT Animation Club'],
+          fblink: "https://www.facebook.com/events/246976706019874/"
+        },
+        {
+          type: 'panel',
+          location: '3-270',
+          title: 'Young Founders Panel',
+          description: 'Join us to hear the stories of Dylan Field (Co-founder and CEO of Figma), Alexandr Wang (Founder and CEO of Scale API), and Ben Nelson (Co-founder and CTO of Lambda School). \nHave any questions for them? Submit a question at go.hackmit.org/youngfounders. \nDonuts from Union Square Donut will be served.',
+          start: 19.5,
+          end: 20.5,
+          people: ['Dylan Field', 'Alexandr Wang', 'Ben Nelson'],
+          fblink: "https://www.facebook.com/events/317254482374259/"
+        },
+        {
+          type: 'social',
+          location: '5-233, 5-234',
+          title: 'PreCheckin & Friends!', 
+          description: 'Want to beat the early morning line? Come in to 5-234 for pre-checkin! Bring your government and student ID, and we\'ll help you skip the line Saturday morning. Once you get checked in, head over to 5-233 for some board games with friends! We\'ll have a bunch of board games ready, but feel free to bring your own and bring friends that\'ll be at HackMIT with you. \nPizza, boba, and Toscis will be served!',
+          start: 21,
+          end: 20.5,
+          people: ['HackMIT'],
+          fblink: "https://www.facebook.com/events/931781843699437/"
+        },
+      ]
+    },
+    
+  ];
