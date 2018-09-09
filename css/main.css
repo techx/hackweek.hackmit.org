@@ -14,11 +14,27 @@
   padding: 0;
 }
 
-body {
-  color: #0b3b4b;
-  background: #fffefa;
-  font-family: Montserrat;
+
+@font-face {
+  font-family: LoveloBlack;
+  src: url(../assets/fonts/Lovelo_Black.otf);
 }
+
+@font-face {
+  font-family: BrandonReg;
+  src: url(../assets/fonts/Brandon_reg.otf);
+}
+
+body {
+  color: #180724;
+  background: #fffefa;
+  font-family: BrandonReg, Montserrat;
+}
+
+header {
+    font-family: LoveloBlack;
+}
+
 
 header, div {
   box-sizing: border-box;
@@ -54,15 +70,15 @@ a:active {
 header {
   width: 100%;
   padding: 25px 20%;
-  background: #0b3b4b;
-  color: #fffefa;
+  background: #180724;
+  color: #edfaf0;
 }
 
 .headings {
   float: left;
   margin-left: 25px;
   margin-top: 21px;
-  font-size: 16px;
+  font-size: 300%;
   letter-spacing: 5px;
 }
 
@@ -81,7 +97,7 @@ header {
 
 .stripe {
   height: 6px;
-  background: linear-gradient(to right, #fc5454 0%, #fc5454 20%, #ffe86b 20%, #ffe86b 40%, #4ecdc4 40%, #4ecdc4 60%, #ffbc29 60%, #ffbc29 80%, #c9d41b 80%, #c9d41b 100%);
+  background: linear-gradient(to right, #180724 0%, #180724 20%, #ff36bf 20%, #ff36bf 40%, #36faea 40%, #36faea 60%, #b9f734 60%, #b9f734 80%, #ec3e5b 80%, #ec3e5b 100%);
   margin: 25px 0 5px;
 }
 
@@ -95,13 +111,13 @@ header {
 }
 
 .date {
-  color: #0b3b4b;
+  color: #180724;
   margin-bottom: 5px;
 }
 
 .times {
   font-size: 10px;
-  color: #2e6273;
+  color: #180724;
   clear: both;
   display: block;
   margin-bottom: 3px;
@@ -129,26 +145,24 @@ header {
   border-radius: 2px;
   padding: 5px;
   cursor: pointer;
+  color: #180724;
+
 }
 
 .talk.event {
-  background: #4ecdc4;
-  color: #fffefa;
+  background: #36faea;
 }
 
 .workshop.event {
-  background: #fc5454;
-  color: #fffefa;
+  background: #ff36bf;
 }
 
 .panel.event {
-  background: #c9d41b;
-  color: #fffefa;
+  background: #b9f734;
 }
 
 .social.event {
-  background: #ffbc29;
-  color: #fffefa;
+  background: #ec3e5b;
 }
 
 .empty {
@@ -216,15 +230,15 @@ footer {
   .half-hour {
     width: 45px;
   }
-  
+
   .one-hour {
     width: 90px;
   }
-  
+
   .one-and-a-half-hour {
     width: 135px;
   }
-  
+
   .two-hour {
     width: 180px;
   }
@@ -242,15 +256,15 @@ footer {
   .half-hour {
     width: 40px;
   }
-  
+
   .one-hour {
     width: 80px;
   }
-  
+
   .one-and-a-half-hour {
     width: 120px;
   }
-  
+
   .two-hour {
     width: 160px;
   }
@@ -287,7 +301,7 @@ footer {
 	  height: 4px;
 	}
 
-	.times { display: none; } 
+	.times { display: none; }
 
   .location {
     display: none;
@@ -305,7 +319,7 @@ footer {
 	.block {
 		display: none;
 	}
-  
+
   .event {
     margin-bottom: 5px;
   }
