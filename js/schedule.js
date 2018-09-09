@@ -16,7 +16,7 @@ var SCHEDULE = [
           type: 'workshop',
           location: '3-270',
           title: 'Solidity Workshop by MIT Bitcoin Club',
-          description: 'The MIT Bitcoin Club will be hosting a solidity (blockchain) workshop - open to all! Join us to learn and see if you want to create a blockchain project at HackMIT.\nInsomnia cookies will be provided.',
+          description: 'Blockchain and cryptocurrencies have the potential to revolutionize finance, healthcare, supply chain, energy, gaming, etc. But how and why? The MIT Bitcoin Club will be hosting a blockchain use cases workshop on Tuesday 9/11! Join us to learn how you can incorporate blockchain into your hack at HackMIT.',
           start: 20,
           end: 21,
           people: ['MIT Bitcoin Club'],
