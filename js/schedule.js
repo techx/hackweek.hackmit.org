@@ -55,17 +55,17 @@ var SCHEDULE = [
         {
           type: 'social',
           location: 'Lobby 10',
-          title: 'Technology Demo Event by a16z', 
+          title: 'Technology Demo Event by a16z',
           description: 'Swing by our technology demo event hosted by Andreessen Horowitz (a16z), a VC firm based in California. See and experience the technology of more than 8 portfolio companies from a16z! We\'ll be in Lobby 10 from 6:30-8:30 on Thursday.\nChipotle dinner will be provided.',
           start: 18.5,
           end: 20.5,
-          people: ['a16z'],
+          people: ['Andreessen Horowitz'],
           fblink: "https://www.facebook.com/events/233507173982925/"
         },
         {
           type: 'workshop',
           location: '3-270',
-          title: 'API/Webdev Workshop', 
+          title: 'API/Webdev Workshop',
           description: 'Learn how to use the endless data and wide variety of powerful tools available to you on the web. This is geared towards beginners with little to no knowledge of building websites or automatically gathering data from the Internet.\nBring your laptop and make sure you have a text editor installed so that you can follow along with the workshop.\nDesserts from Flour will be served.',
           start: 20.5,
           end: 21.5,
@@ -80,7 +80,7 @@ var SCHEDULE = [
         {
           type: 'workshop',
           location: '3-270',
-          title: '3D Models and AR in iOS Workshop by MIT Animation Club', 
+          title: '3D Models and AR in iOS Workshop by MIT Animation Club',
           description: 'Want to learn about how to make iOS apps with 3D models and augmented reality? This workshop will guide you through the app creation process with Xcode and teach you how to add augmented reality and 3D models to your iOS projects. Beginners are welcome!\nFood from Oasis will be served.',
           start: 18,
           end: 19,
@@ -100,14 +100,14 @@ var SCHEDULE = [
         {
           type: 'social',
           location: '5-233, 5-234',
-          title: 'PreCheckin & Friends!', 
+          title: 'PreCheckin & Friends!',
           description: 'Want to beat the early morning line? Come in to 5-234 for pre-checkin! Bring your government and student ID, and we\'ll help you skip the line Saturday morning. Once you get checked in, head over to 5-233 for some board games with friends! We\'ll have a bunch of board games ready, but feel free to bring your own and bring friends that\'ll be at HackMIT with you. \nPizza, boba, and Toscis will be served!',
           start: 21,
-          end: 20.5,
+          end: 22.5,
           people: ['HackMIT'],
           fblink: "https://www.facebook.com/events/931781843699437/"
         },
       ]
     },
-    
+
   ];

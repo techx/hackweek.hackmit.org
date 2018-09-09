@@ -85,9 +85,6 @@ header {
 .logo {
   width: 80px;
   float: left;
-  -webkit-transform: rotate(-20deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-  -ms-transform: rotate(-20deg); /* IE 9 */
-  transform: rotate(-20deg);
 }
 
 .description {
@@ -141,7 +138,6 @@ header {
 .event {
   min-height: 75px;
   float: left;
-	box-shadow: -2px 2px 0px #0b3b4b;
   border-radius: 2px;
   padding: 5px;
   cursor: pointer;
@@ -184,19 +180,19 @@ header {
 }
 
 .half-hour {
-  width: 65px;
+  width: 11.1%;
 }
 
 .one-hour {
-  width: 130px;
+  width: 22.2%;
 }
 
 .one-and-a-half-hour {
-  width: 195px;
+  width: 33.3%;
 }
 
 .two-hour {
-  width: 260px;
+  width: 44.4%;
 }
 
 footer {
