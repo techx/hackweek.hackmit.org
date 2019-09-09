@@ -4,7 +4,7 @@ var SCHEDULE = [
       items: [
         {
           type: 'workshop',
-          location: '1-242',
+          location: '1-150',
           title: 'Algorand: Blockchain with IoT',
           description: 'Join Algorand for an easy guide to making a homemade blockchain-enabled IoT device with an introduction to the Algorand Python SDK and Algorand blockchain. We\’ll also have food from Saloniki!',
           start: 18,
@@ -15,7 +15,7 @@ var SCHEDULE = [
       ]
     },
     {
-      date: '2018-09-10',
+      date: '2019-09-10',
       items: [
         {
           type: 'panel',
@@ -30,7 +30,7 @@ var SCHEDULE = [
       ]
     },
     {
-      date: '2018-09-11',
+      date: '2019-09-11',
       items: [
         {
           type: 'talk',
@@ -45,7 +45,7 @@ var SCHEDULE = [
       ]
     },
     {
-      date: '2018-09-12',
+      date: '2019-09-12',
       items: [
         {
           type: 'talk',
@@ -56,7 +56,7 @@ var SCHEDULE = [
           end: 19.5,
           people: ['Microsoft'],
           fblink: "https://www.facebook.com/events/2389789311269223"
-        },
+        }, 
         {
           type: 'workshop',
           location: '3-333',
@@ -66,7 +66,12 @@ var SCHEDULE = [
           end: 20.5,
           people: ['Wayfair'],
           fblink: "https://www.facebook.com/events/2389789314602556"
-        },
+        }
+      ]
+    },
+    {
+      date: '2019-09-13',
+      items: [
         {
           type: 'social',
           location: 'La Sala',
