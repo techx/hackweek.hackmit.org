@@ -16,23 +16,18 @@
 
 
 @font-face {
-  font-family: LoveloBlack;
-  src: url(../assets/fonts/Lovelo_Black.otf);
-}
-
-@font-face {
-  font-family: BrandonReg;
-  src: url(../assets/fonts/Brandon_reg.otf);
+  font-family: 'Norwester';
+  src: url(../assets/fonts/norwester.otf);
 }
 
 body {
   color: #180724;
   background: #fffefa;
-  font-family: BrandonReg, Montserrat;
+  font-family: "Open Sans";
 }
 
 header {
-    font-family: LoveloBlack;
+  font-family: "Norwester";
 }
 
 
@@ -70,8 +65,8 @@ a:active {
 header {
   width: 100%;
   padding: 25px 20%;
-  background: #180724;
-  color: #edfaf0;
+  background: #fbde00;
+  color: #ff6f61;;
 }
 
 .headings {
@@ -94,7 +89,7 @@ header {
 
 .stripe {
   height: 6px;
-  background: linear-gradient(to right, #180724 0%, #180724 20%, #ff36bf 20%, #ff36bf 40%, #36faea 40%, #36faea 60%, #b9f734 60%, #b9f734 80%, #ec3e5b 80%, #ec3e5b 100%);
+  background: linear-gradient(to right, #ff6f61 0%, #ff6f61 20%, #00d87b 20%, #00d87b 40%, #23c0cf 40%, #23c0cf 60%, #fbde00 60%, #fbde00 80%, #f766a6 80%, #f766a6 100%);
   margin: 25px 0 5px;
 }
 
@@ -146,19 +141,19 @@ header {
 }
 
 .talk.event {
-  background: #36faea;
+  background: #ff6f61;
 }
 
 .workshop.event {
-  background: #ff36bf;
+  background: #00d87b;
 }
 
 .panel.event {
-  background: #b9f734;
+  background: #2ec0cf;
 }
 
 .social.event {
-  background: #ec3e5b;
+  background: #fbde00;
 }
 
 .empty {

@@ -279,7 +279,7 @@ var HackweekSchedule = (function() {
       modalStyles: function(styles) {
         styles.background = '#fffefa';
         styles.color = '#0b3b4b';
-        styles.fontFamily = 'Lato';
+        styles.fontFamily = 'Open Sans';
         styles.width = '80%';
         styles.opacity = 0;
         return styles;
