@@ -34,7 +34,7 @@ var SCHEDULE = [
       items: [
         {
           type: 'talk',
-          location: '3-270',
+          location: '3-370',
           title: 'Puzzle Walkthrough',
           description: 'Wondering how to solve our admissions puzzle this year? Come join us as we discuss interesting puzzle-solving techniques over free pizza and pasta!',
           start: 18,
