@@ -52,7 +52,7 @@ var SCHEDULE = [
           location: '3-370',
           title: 'Microsoft: Taste test Azure’s AI services! ',
           description: 'Get inspired for your next hackathon project with an overview of these Azure cloud tools, frameworks, and services that enable AI to work its magic while you enjoy some Chipotle!',
-          start: 18,
+          start: 18.5,
           end: 19.5,
           people: ['Microsoft'],
           fblink: "https://www.facebook.com/events/2389789311269223"
